@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        File: validator.html
+        Zachary Muranaka
+        Webpage for YouTube validator
+     -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>YouTube Validator</title>
+    <link href="styles/validator_styles.css" rel="stylesheet">
+    <script src="scripts/validator.js" async></script>
+</head>
+
+<body>
+    <h1>YouTube Validator</h1>
+    
+    <section>
+        <h2 class="displayInline">Validate By Direct Input:</h2>
+        <label for="validateTxtBox">https://www.youtube.com/watch?v=</label>
+        <input type="text" id="validateTxtBox">
+        <input type="button" id="validateBtn" value="Validate">
+    </section>
+
+    <section>
+        <h2 class="displayInline">Validate Randomly Generated URLs:</h2>
+        <input type="button" id="startBtn" value="Start">
+        <input type="button" id="stopBtn" value="Stop">
+    </section>
+
+    <section id="invalidLinks" class="twoColumn">
+        <h2 class="backgroundFill">Invalid URLs</h2>
+        <label>Number Generated:</label>
+        <div id="invalidCounter">0</div>
+    </section>
+
+    <section id="validLinks" class="twoColumn">
+        <h2 class="backgroundFill">Valid URLs</h2>
+        <label>Number Generated:</label>
+        <div id="validCounter">0</div>
+    </section>
+
+    <input type="button" id="clearBtn" value="Clear">
+    
+    <footer>
+        <div>
+            &#9400; 2020 Zachary Muranaka
+            <br>
+            <a href="mailto:zacharymuranaka@mail.weber.edu"><img src="images/mailLogo.png" alt=""/></a>
+            <a href="https://github.com/zmuranaka" target="_blank"><img src="images/githubLogo.png" alt=""/></a>
+            <a href="http://icarus.cs.weber.edu/~zm83483/index.html" target="_blank"><img src="images/linkLogo.png" alt=""/></a>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+/*
+File: validator_styles.css
+Zachary Muranaka
+Styles for validator.html
+*/
+
+html {
+    min-height: 100%;
+    background: linear-gradient(to top, rgb(200, 200, 255), white);
+    background: -webkit-linear-gradient(bottom, rgb(200, 200, 255), white);
+    background: -o-linear-gradient(bottom, rgb(200, 200, 255), white);
+}
+
+body {
+    max-width: 100%;
+    min-width: 320px; /* Narrowest screen in common use */
+    margin: 0;
+    background-color: white;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+h1 {
+    margin: 0;
+    padding: 0.5em 0 0.5em 0.5em;
+    font-size: 2.25em;
+    color: white;
+    border: 1px solid white;
+    background: -webkit-linear-gradient(bottom, rgb(240, 0, 0), red);
+    background: -o-linear-gradient(bottom, rgb(240, 0, 0), red);
+    background: linear-gradient(to top, rgb(240, 0, 0), red);
+}
+
+/* Input button styles */
+
+/* Styles that apply to every input button */
+input[type=button] {
+    color: ivory;
+    height: 2em;
+    width: 5em;
+    font-size: 2em;
+    margin: 0 0 0.5em 0.5em;
+    padding: 0;
+    cursor: pointer;
+}
+
+#validateBtn {
+    background: linear-gradient(to top, rgb(150, 125, 0), gold);
+    background: -webkit-linear-gradient(bottom, rgb(150, 125, 0), gold);
+    background: -o-linear-gradient(bottom, rgb(150, 125, 0), gold);
+    border: 1px solid rgb(80, 60, 0);
+}
+
+#validateBtn:active {
+    background: linear-gradient(to top, yellow, white);
+    background: -webkit-linear-gradient(bottom, yellow, white);
+    background: -o-linear-gradient(bottom, yellow, white);
+    color: rgb(30, 15, 0);
+}
+
+#startBtn {
+    background: linear-gradient(to top, green, rgb(0, 255, 0));
+    background: -webkit-linear-gradient(bottom, green, rgb(0, 255, 0));
+    background: -o-linear-gradient(bottom, green, rgb(0, 255, 0));
+    border: 1px solid rgb(0, 80, 0);
+}
+
+#startBtn:active {
+    background: linear-gradient(to top, yellow, white);
+    background: -webkit-linear-gradient(bottom, yellow, white);
+    background: -o-linear-gradient(bottom, yellow, white);
+    color: rgb(0, 30, 0);
+}
+
+#stopBtn {
+    background: linear-gradient(to top, maroon, red);
+    background: -webkit-linear-gradient(bottom, maroon, red);
+    background: -o-linear-gradient(bottom, maroon, red);
+    border: 1px solid rgb(80, 0, 0);
+}
+
+#stopBtn:active {
+    background: linear-gradient(to top, yellow, white);
+    background: -webkit-linear-gradient(bottom, yellow, white);
+    background: -o-linear-gradient(bottom, yellow, white);
+    color: rgb(30, 0, 0);
+}
+
+#clearBtn {
+    background: linear-gradient(to top, rgb(255, 45, 70), pink);
+    background: -webkit-linear-gradient(bottom, rgb(255, 45, 70), pink);
+    background: -o-linear-gradient(bottom, rgb(255, 45, 70), pink);
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.25em;
+    width: 10%;
+    border: 1px solid rgb(80, 20, 40);
+}
+
+#clearBtn:active {
+    background: linear-gradient(to top, yellow, white);
+    background: -webkit-linear-gradient(bottom, yellow, white);
+    background: -o-linear-gradient(bottom, yellow, white);
+    color: rgb(30, 10, 15);
+}
+
+/* Styles the text input */
+input[type=text] {
+    font-size: 1.4em;
+}
+
+/* Section styles */
+
+section {
+    margin-top: 0.5em;
+}
+
+.twoColumn {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: 43%;
+}
+
+section h2 {
+    margin: 0 0 0.5em 0;
+    padding: 0.5em 0 0.5em 0.5em;
+    font-size: 1.7em;
+}
+
+.displayInline {
+    display: inline;
+}
+
+.backgroundFill {
+    color: white;
+    background: -webkit-linear-gradient(bottom, rgb(0, 0, 204), rgb(80, 80, 204));
+    background: -o-linear-gradient(bottom, rgb(0, 0, 204), rgb(80, 80, 204));
+    background: linear-gradient(to top, rgb(0, 0, 204), rgb(80, 80, 204));
+}
+
+section p {
+    font-size: 0.85em;
+    margin: 0.8em 0 0 0.5em;
+    width: 100%;
+}
+
+section div {
+    display: inline;
+    font-size: 1.5em;
+    margin: 0;
+    padding-left: 0.3em;
+}
+
+/* Styles the label next to the input text box */
+label {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+
+/* Footer styles */
+
+footer {
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 1em;
+    color: white;
+    width: 100%;
+    font-size: 0.8em;
+    font-variant: small-caps;
+    border: 1px solid black;
+    background: -webkit-linear-gradient(rgb(0, 0, 204), midnightblue);
+    background: -o-linear-gradient(rgb(0, 0, 204), midnightblue);
+    background: linear-gradient(rgb(0, 0, 204), midnightblue);
+}
+
+footer a {
+    display: inline-block;
+    color: white;
+    margin: 1em 1em 1em 0;
+    text-decoration: none;
+}
