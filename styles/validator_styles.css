@@ -143,7 +143,7 @@ section p {
     width: 100%;
 }
 
-section div {
+.counter {
     display: inline;
     font-size: 1.5em;
     margin: 0;
@@ -178,4 +178,96 @@ footer a {
     color: white;
     margin: 1em 1em 1em 0;
     text-decoration: none;
+}
+
+/* Applies to larger mobile screens, like tablets */
+@media screen and (max-width: 715px) {
+
+    input[type=text] {
+        width: 30%;
+    }
+
+    #validateBtn {
+        left: 70%;
+    }
+
+    #generator {
+        left: 45%;
+    }
+
+    .twoColumn {
+        width: 38%;
+    }
+
+    #clearBtn {
+        width: 17%;
+    }
+
+}
+
+/* Moves the validateBtn and generator btns below their respective h2 */
+@media screen and (max-width: 888px) {
+
+    #validateBtn, #generator {
+        display: block;
+        position: relative;
+        margin-top: 0.5em;
+    }
+
+}
+
+/* Applies to large mobile screens, like tablets in landscape mode */
+@media screen and (min-width: 716px) and (max-width: 888px) {
+
+    #validateBtn {
+        left: 75%;
+    }
+
+    #generator {
+        left: 50%;
+    }
+
+    .twoColumn {
+        width: 39%;
+    }
+
+    #clearBtn {
+        width: 16%;
+    }
+
+}
+
+/* Resizes the two columns and the clearBtn to fit the screen better */
+@media screen and (min-width: 889px) and (max-width: 1020px) {
+
+    .twoColumn {
+        width: 40%;
+    }
+
+    #clearBtn {
+        width: 15%;
+    }
+
+}
+
+/* Moves the validation elements below the h2 */
+@media screen and (max-width: 1220px) {
+
+    #validation {
+        display: block;
+    }
+
+}
+
+/* Resizes the two columns and the clearBtn to fit the screen better*/
+@media screen and (min-width: 1021px) and (max-width: 1220px) {
+
+    .twoColumn {
+        width: 41%;
+    }
+
+    #clearBtn {
+        width: 14%;
+    }
+
 }

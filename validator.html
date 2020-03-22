@@ -19,27 +19,31 @@
     
     <section>
         <h2 class="displayInline">Validate By Direct Input:</h2>
-        <label for="validateTxtBox">https://www.youtube.com/watch?v=</label>
-        <input type="text" id="validateTxtBox">
-        <input type="button" id="validateBtn" value="Validate">
+        <div class="displayInline" id="validation">
+            <label for="validateTxtBox">https://www.youtube.com/watch?v=</label>
+            <input type="text" id="validateTxtBox">
+            <input type="button" id="validateBtn" value="Validate">
+        </div>
     </section>
 
     <section>
         <h2 class="displayInline">Validate Randomly Generated URLs:</h2>
-        <input type="button" id="startBtn" value="Start">
-        <input type="button" id="stopBtn" value="Stop">
+        <div class="displayInline" id="generator">
+            <input type="button" id="startBtn" value="Start">
+            <input type="button" id="stopBtn" value="Stop">
+        </div>
     </section>
 
     <section id="invalidLinks" class="twoColumn">
         <h2 class="backgroundFill">Invalid URLs</h2>
         <label>Number Generated:</label>
-        <div id="invalidCounter">0</div>
+        <div class="counter" id="invalidCounter">0</div>
     </section>
 
     <section id="validLinks" class="twoColumn">
         <h2 class="backgroundFill">Valid URLs</h2>
         <label>Number Generated:</label>
-        <div id="validCounter">0</div>
+        <div class="counter" id="validCounter">0</div>
     </section>
 
     <input type="button" id="clearBtn" value="Clear">

@@ -30,7 +30,7 @@ http://conferences.sigcomm.org/imc/2011/docs/p371.pdf
 https://gist.github.com/tonY1883/a3b85925081688de569b779b4657439b  
 &nbsp;&nbsp;&nbsp;&nbsp;This trick from GitHub user tonY1883 gave me the idea of how to validate a YouTube URL with plain JavaScript.  
 https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp  
-&nbsp;&nbsp;&nbsp;&nbsp;W3Schools was very helpful as a general reference.
+&nbsp;&nbsp;&nbsp;&nbsp;W3Schools was very helpful when I was checking that my syntax was correct and as a general reference. For example, the webpage I linked helped me figure out how to call a function when the user presses the 'enter' key.
 
 ## Author:
 
