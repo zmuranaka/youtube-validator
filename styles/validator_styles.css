@@ -103,9 +103,9 @@ input[type=button] {
     color: rgb(30, 10, 15);
 }
 
-/* Styles the text input */
-input[type=text] {
+#validateTxtBox {
     font-size: 1.4em;
+    border: 1px solid black;
 }
 
 /* Section styles */
@@ -150,7 +150,7 @@ section p {
     padding-left: 0.3em;
 }
 
-/* Styles the label next to the input text box */
+/* Styles the label next to the validateTxtBox */
 label {
     font-weight: bold;
     font-size: 1.5em;
@@ -180,11 +180,85 @@ footer a {
     text-decoration: none;
 }
 
-/* Applies to larger mobile screens, like tablets */
+/* Applies to medium-sized screens, like large phones and small tablets */
+@media screen and (max-width: 683px) {
+
+    body {
+        text-align: center;
+    }
+
+    h1 {
+        padding-right: 0.5em;
+    }
+
+    .displayInline {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    #validateTxtBox {
+        margin-top: 0.5em;
+        width: 50%;
+        left: 25%;
+        text-align: center; /* Centers the text within the text box */
+    }
+
+    #validateBtn {
+        margin-left: 0;
+        left: 30%;
+        width: 40%;
+    }
+
+    #startBtn, #stopBtn {
+        margin: 0.25em 0 0.5em 0;
+    }
+
+    .backgroundFill {
+        margin-top: 3em;
+        padding-right: 0.5em;
+    }
+
+    #clearBtn {
+        position: absolute;
+        right: 30%;
+        width: 40%;
+        margin: 0; /* Its position is absolute so it no longer needs margins */
+    }
+
+    label {
+        margin: 0;
+    }
+
+    .counter {
+        padding: 0;
+    }
+
+    .twoColumn {
+        margin-left: 0;
+        width: 48%;
+    }
+
+    section p {
+        margin-left: 0;
+        text-align: left;
+    }
+
+}
+
+/* Makes the counters display below their label */
 @media screen and (max-width: 715px) {
 
-    input[type=text] {
-        width: 30%;
+    .counter {
+        display: block;
+    }
+
+}
+
+/* Applies to a fairly specific range of medium-sized screens, generally tablets */
+@media screen and (min-width: 684px) and (max-width: 715px) {
+
+    #validateTxtBox {
+        width: 35%;
     }
 
     #validateBtn {
@@ -201,6 +275,10 @@ footer a {
 
     #clearBtn {
         width: 17%;
+    }
+
+    .counter {
+        padding-left: 0.5em;
     }
 
 }

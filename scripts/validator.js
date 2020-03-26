@@ -77,7 +77,7 @@ function()
  * And y, the last character, can only be one of the following:
  * 0, 4, 8, A, E, I, M, Q, U, Y, c, g, k, o, s, w
  *
- * Reference: http://conferences.sigcomm.org/imc/2011/docs/p371.pdf
+ * Source: http://conferences.sigcomm.org/imc/2011/docs/p371.pdf
  */
 function getRandomLink()
 {   
