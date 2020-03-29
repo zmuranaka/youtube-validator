@@ -30,7 +30,7 @@ h1 {
     background: linear-gradient(to top, rgb(240, 0, 0), red);
 }
 
-/* Input button styles */
+/* Input styles */
 
 /* Styles that apply to every input button */
 input[type=button] {
@@ -180,7 +180,53 @@ footer a {
     text-decoration: none;
 }
 
-/* Applies to medium-sized screens, like large phones and small tablets */
+/* Applies to very small screens, like small phones */
+@media screen and (max-width: 380px) {
+
+    h1 span {
+        display: block;
+    }
+
+    div > label {
+        font-size: 1.1em;
+    }
+
+    #startBtn, #stopBtn {
+        display: block;
+        margin: 0 25% 0.5em 25%;
+        width: 50%;
+    }
+
+    #clearBtn {
+        right: 25%;
+        width: 50%;
+    }
+
+    section p {
+        font-size: 0.65em;
+    }
+
+}
+
+/* Resizes the URL to better fit the screen size */
+@media screen and (min-width: 381px) and (max-width: 429px) {
+
+    div > label {
+        font-size: 1.3em;
+    }
+
+}
+
+/* Style that makes h2s and labels with spans display in two lines */
+@media screen and (max-width: 490px) {
+
+    h2 span, label span {
+        display: block;
+    }
+
+}
+
+/* Applies to most mobile views, like phones and smaller tablets */
 @media screen and (max-width: 683px) {
 
     body {
@@ -209,10 +255,6 @@ footer a {
         width: 40%;
     }
 
-    #startBtn, #stopBtn {
-        margin: 0.25em 0 0.5em 0;
-    }
-
     .backgroundFill {
         margin-top: 3em;
         padding-right: 0.5em;
@@ -220,8 +262,6 @@ footer a {
 
     #clearBtn {
         position: absolute;
-        right: 30%;
-        width: 40%;
         margin: 0; /* Its position is absolute so it no longer needs margins */
     }
 
@@ -245,7 +285,21 @@ footer a {
 
 }
 
-/* Makes the counters display below their label */
+/* Styles to make the buttons better fit the screen size */
+@media screen and (min-width: 381px) and (max-width: 683px) {
+
+    #startBtn, #stopBtn {
+        margin: 0.25em 0 0.5em 0;
+    }
+
+    #clearBtn {
+        right: 30%;
+        width: 40%;
+    }
+
+}
+
+/* Moves the counters below their label */
 @media screen and (max-width: 715px) {
 
     .counter {
@@ -294,7 +348,7 @@ footer a {
 
 }
 
-/* Applies to large mobile screens, like tablets in landscape mode */
+/* Applies to large mobile screens, like large tablets */
 @media screen and (min-width: 716px) and (max-width: 888px) {
 
     #validateBtn {
@@ -315,8 +369,8 @@ footer a {
 
 }
 
-/* Resizes the two columns and the clearBtn to fit the screen better */
-@media screen and (min-width: 889px) and (max-width: 1020px) {
+/* Resizes the two columns and the clearBtn to better fit the screen size */
+@media screen and (min-width: 889px) and (max-width: 1100px) {
 
     .twoColumn {
         width: 40%;
@@ -337,8 +391,8 @@ footer a {
 
 }
 
-/* Resizes the two columns and the clearBtn to fit the screen better*/
-@media screen and (min-width: 1021px) and (max-width: 1220px) {
+/* Resizes the two columns and the clearBtn to better fit the screen size*/
+@media screen and (min-width: 1101px) and (max-width: 1220px) {
 
     .twoColumn {
         width: 41%;
