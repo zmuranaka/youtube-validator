@@ -131,7 +131,7 @@ function checkLinkValidity(endOfLink)
          * Therefore, we check the validity of the link based on the thumbnail YouTube gives it
          */
         linkValidity = this.width === 320 && this.height === 180;
-        createNewP(startOfLink, endOfLink);
+        createNewAnchorElement(startOfLink, endOfLink);
     };
 }
 
@@ -145,17 +145,22 @@ function getThumbnail(characters)
     return thumbnail;
 }
 
-// Creates a new paragraph element that is appended to the document
-function createNewP(startOfLink, endOfLink)
+// Creates a new anchor element that is appended to the document
+function createNewAnchorElement(startOfLink, endOfLink)
 {
     if(!linkValidity)
     {
         invalidCount++; // We have found another invalid link
-        var newInvalidLink = document.createElement("p");
-        newInvalidLink.innerHTML = startOfLink + endOfLink;
+        var newInvalidLink = document.createElement("a"); // Create a new anchor element
+
+        // Set the attributes of the element
+        newInvalidLink.href = startOfLink + endOfLink;
+        newInvalidLink.textContent = startOfLink + endOfLink;
+        newInvalidLink.target = "blank";
         newInvalidLink.classList.add("invalidLink"); // Give this element the class of "invalidLink"
         newInvalidLink.style.float = "left";
-        document.getElementById("invalidLinks").appendChild(newInvalidLink); // Add this p to the document
+
+        document.getElementById("invalidLinks").appendChild(newInvalidLink);
         document.getElementById("invalidCounter").textContent = invalidCount; // Update the invalidCounter
         if(startHasBeenClicked && stopHasNotBeenClicked)
             getRandomLink();
@@ -163,11 +168,16 @@ function createNewP(startOfLink, endOfLink)
     else
     {
         validCount++; // We found a valid link
-        var newValidLink = document.createElement("p");
-        newValidLink.innerHTML = startOfLink + endOfLink;
+        var newValidLink = document.createElement("a"); // Create a new anchor element
+
+        // Set the attributes of the element
+        newValidLink.href = startOfLink + endOfLink;
+        newValidLink.textContent = startOfLink + endOfLink;
+        newValidLink.target = "blank";
         newValidLink.classList.add("validLink"); // Give this element the class of "validLink"
         newValidLink.style.float = "left";
-        document.getElementById("validLinks").appendChild(newValidLink); // Add this p to the document
+
+        document.getElementById("validLinks").appendChild(newValidLink);
         document.getElementById("validCounter").textContent = validCount; // Update the validCounter
         if(startHasBeenClicked && stopHasNotBeenClicked)
             getRandomLink();
