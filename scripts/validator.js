@@ -30,7 +30,7 @@ function()
 window.addEventListener("keyup",
 function(e)
 {
-    if(e.keyCode == 13) // 13 is the keycode for enter
+    if(e.keyCode === 13) // 13 is the keycode for enter
     {
         startHasBeenClicked = true; // Pressing enter is equivalent to clicking start
         stopHasNotBeenClicked = true; // The stop button has not been clicked
@@ -52,14 +52,14 @@ function()
     let validLinks = document.getElementsByClassName("validLink");
 
     // Destroy all invalid links
-    while(invalidLinks.length > 0)
+    while(invalidLinks.length)
     {
         invalidLinks[0].parentNode.removeChild(invalidLinks[0]); // Destroy the first invalidLink
         invalidCount--;
     }
 
     // Destroy all valid links
-    while(validLinks.length > 0)
+    while(validLinks.length)
     {
         validLinks[0].parentNode.removeChild(validLinks[0]); // Destroy the first validLink
         validCount--;
@@ -71,7 +71,7 @@ function()
 });
 
 /*
- * A YouTube video's web address is https://www.youtube.com/watch?v=xxxxxxxxxxy
+ * A YouTube video's URL is https://www.youtube.com/watch?v=xxxxxxxxxxy
  * Where x can be a single character of any of the following:
  * A single dash, 0 to 9, A to Z, an underscore, a to z
  * And y, the last character, can only be one of the following:
@@ -97,13 +97,13 @@ function generateAsciiCode()
 {
     let randomNum = Math.floor(Math.random() * 64) + 1; // Generates a random number 1 to 64
 
-    if(randomNum == 1)
+    if(randomNum === 1)
         return 45; // ASCII code for single dash
     else if(randomNum >= 2 && randomNum <= 11)
         return randomNum + 46; // ASCII codes for 0 to 9
     else if(randomNum >= 12 && randomNum <= 37)
         return randomNum + 53; // ASCII codes for A to Z
-    else if(randomNum == 38)
+    else if(randomNum === 38)
         return 95; // ASCII code for underscore
     else
         return randomNum + 58; // ASCII code for a to z
@@ -128,7 +128,7 @@ function checkLinkValidity(endOfLink)
         /*
          * A valid YouTube URL will have a thumbnail of width 320px and height 180px
          * An invalid YouTube URL will be given a default thumbnail of width 120px and height 90px
-         * Therefore, we check the validity of the link based on the thumbnail YouTube gives it
+         * Therefore, we check the validity of the URL based on the thumbnail YouTube gives it
          */
         linkValidity = this.width === 320 && this.height === 180;
         createNewAnchorElement(startOfLink, endOfLink);
@@ -140,7 +140,7 @@ function getThumbnail(characters)
 {
     // Create an img with the src of the YouTube URL's thumbnail
     var thumbnail = new Image();
-    thumbnail.src = "https://img.youtube.com/vi/" + characters + "/mqdefault.jpg";
+    thumbnail.src = "https://img.youtube.com/vi/" + characters + "/mqdefault.jpg"; // URL of thumbnail
 
     return thumbnail;
 }
@@ -148,29 +148,12 @@ function getThumbnail(characters)
 // Creates a new anchor element that is appended to the document
 function createNewAnchorElement(startOfLink, endOfLink)
 {
-    if(!linkValidity)
+    if(linkValidity) // The URL is valid
     {
-        invalidCount++; // We have found another invalid link
-        var newInvalidLink = document.createElement("a"); // Create a new anchor element
-
-        // Set the attributes of the element
-        newInvalidLink.href = startOfLink + endOfLink;
-        newInvalidLink.textContent = startOfLink + endOfLink;
-        newInvalidLink.target = "blank";
-        newInvalidLink.classList.add("invalidLink"); // Give this element the class of "invalidLink"
-        newInvalidLink.style.float = "left";
-
-        document.getElementById("invalidLinks").appendChild(newInvalidLink);
-        document.getElementById("invalidCounter").textContent = invalidCount; // Update the invalidCounter
-        if(startHasBeenClicked && stopHasNotBeenClicked)
-            getRandomLink();
-    }
-    else
-    {
-        validCount++; // We found a valid link
+        validCount++;
         var newValidLink = document.createElement("a"); // Create a new anchor element
 
-        // Set the attributes of the element
+        // Set the attributes
         newValidLink.href = startOfLink + endOfLink;
         newValidLink.textContent = startOfLink + endOfLink;
         newValidLink.target = "blank";
@@ -179,6 +162,23 @@ function createNewAnchorElement(startOfLink, endOfLink)
 
         document.getElementById("validLinks").appendChild(newValidLink);
         document.getElementById("validCounter").textContent = validCount; // Update the validCounter
+        if(startHasBeenClicked && stopHasNotBeenClicked)
+            getRandomLink();
+    }
+    else // The URL is not valid
+    {
+        invalidCount++;
+        var newInvalidLink = document.createElement("a"); // Create a new anchor element
+
+        // Set the attributes
+        newInvalidLink.href = startOfLink + endOfLink;
+        newInvalidLink.textContent = startOfLink + endOfLink;
+        newInvalidLink.target = "blank";
+        newInvalidLink.classList.add("invalidLink"); // Give this element the class of "invalidLink"
+        newInvalidLink.style.float = "left";
+
+        document.getElementById("invalidLinks").appendChild(newInvalidLink);
+        document.getElementById("invalidCounter").textContent = invalidCount; // Update the invalidCounter
         if(startHasBeenClicked && stopHasNotBeenClicked)
             getRandomLink();
     }
