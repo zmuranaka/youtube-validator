@@ -162,8 +162,7 @@ function createNewAnchorElement(startOfLink, endOfLink)
 
         document.getElementById("validLinks").appendChild(newValidLink);
         document.getElementById("validCounter").textContent = validCount; // Update the validCounter
-        if(startHasBeenClicked && stopHasNotBeenClicked)
-            getRandomLink();
+        if(startHasBeenClicked && stopHasNotBeenClicked) getRandomLink();
     }
     else // The URL is not valid
     {
@@ -179,7 +178,6 @@ function createNewAnchorElement(startOfLink, endOfLink)
 
         document.getElementById("invalidLinks").appendChild(newInvalidLink);
         document.getElementById("invalidCounter").textContent = invalidCount; // Update the invalidCounter
-        if(startHasBeenClicked && stopHasNotBeenClicked)
-            getRandomLink();
+        if(startHasBeenClicked && stopHasNotBeenClicked) getRandomLink();
     }
 }

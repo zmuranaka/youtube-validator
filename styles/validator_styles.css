@@ -90,7 +90,7 @@ input[type=button] {
 
 /* Section styles */
 
-section { margin-top: 0.5em; }
+section { margin-top: 0.5em }
 
 .twoColumn {
     margin-left: 0.5em;
@@ -104,7 +104,7 @@ section h2 {
     font-size: 1.7em;
 }
 
-.displayInline { display: inline; }
+.displayInline { display: inline }
 
 .backgroundFill {
     color: white;
@@ -125,13 +125,13 @@ section a {
     width: 100%;
 }
 
-.invalidLink { color: rgb(220, 0, 30); }
+.invalidLink { color: rgb(220, 0, 30) }
 
-.validLink { color: rgb(0, 120, 30); }
+.validLink { color: rgb(0, 120, 30) }
 
-.invalidLink:hover, .validLink:hover { text-decoration: underline; }
+.invalidLink:hover, .validLink:hover { text-decoration: underline }
 
-.invalidLink:active, .validLink:active { color: yellow; }
+.invalidLink:active, .validLink:active { color: yellow }
 
 /* Styles the label next to the validateTxtBox */
 label {
@@ -164,9 +164,9 @@ footer a {
 /* Applies to very small screens, like small phones */
 @media screen and (max-width: 380px) {
 
-    h1 span { display: block; }
+    h1 span { display: block }
 
-    div > label { font-size: 1.1em; }
+    div > label { font-size: 1.1em }
 
     #validateTxtBox {
         width: 60%;
@@ -184,30 +184,30 @@ footer a {
         width: 50%;
     }
 
-    section a { font-size: 0.65em; }
+    section a { font-size: 0.65em }
 
 }
 
 /* Resizes the URL to better fit the screen size */
 @media screen and (min-width: 381px) and (max-width: 429px) {
 
-    div > label { font-size: 1.3em; }
+    div > label { font-size: 1.3em }
 
 }
 
 /* Style that makes h2s and labels with spans display in two lines */
 @media screen and (max-width: 490px) {
 
-    h2 span, label span { display: block; }
+    h2 span, label span { display: block }
 
 }
 
 /* Applies to most mobile views, like phones and smaller tablets */
 @media screen and (max-width: 683px) {
 
-    body { text-align: center; }
+    body { text-align: center }
 
-    h1 { padding-right: 0.5em; }
+    h1 { padding-right: 0.5em }
 
     .displayInline {
         margin-left: 0;
@@ -235,9 +235,9 @@ footer a {
         margin: 0; /* Its position is absolute so it no longer needs margins */
     }
 
-    label { margin: 0; }
+    label { margin: 0 }
 
-    .counter { padding: 0; }
+    .counter { padding: 0 }
 
     .twoColumn {
         margin-left: 0;
@@ -259,7 +259,7 @@ footer a {
         left: 25%;
     }
 
-    #startBtn, #stopBtn { margin: 0.25em 0 0.5em 0; }
+    #startBtn, #stopBtn { margin: 0.25em 0 0.5em 0 }
 
     #clearBtn {
         right: 30%;
@@ -271,24 +271,24 @@ footer a {
 /* Moves the counters below their label */
 @media screen and (max-width: 715px) {
 
-    .counter { display: block; }
+    .counter { display: block }
 
 }
 
 /* Applies to a fairly specific range of medium-sized screens, generally tablets */
 @media screen and (min-width: 684px) and (max-width: 715px) {
 
-    #validateTxtBox { width: 35%; }
+    #validateTxtBox { width: 35% }
 
-    #validateBtn { left: 70%; }
+    #validateBtn { left: 70% }
 
-    #generator { left: 45%; }
+    #generator { left: 45% }
 
-    .twoColumn { width: 38%; }
+    .twoColumn { width: 38% }
 
-    #clearBtn { width: 17%; }
+    #clearBtn { width: 17% }
 
-    .counter { padding-left: 0.5em; }
+    .counter { padding-left: 0.5em }
 
 }
 
@@ -308,35 +308,35 @@ footer a {
 
     #validateBtn { left: 75%;}
 
-    #generator { left: 50%; }
+    #generator { left: 50% }
 
-    .twoColumn { width: 39%; }
+    .twoColumn { width: 39% }
 
-    #clearBtn { width: 16%; }
+    #clearBtn { width: 16% }
 
 }
 
 /* Resizes the two columns and the clearBtn to better fit the screen size */
 @media screen and (min-width: 889px) and (max-width: 1100px) {
 
-    .twoColumn { width: 40%; }
+    .twoColumn { width: 40% }
 
-    #clearBtn { width: 15%; }
+    #clearBtn { width: 15% }
 
 }
 
 /* Moves the validation elements below the h2 */
 @media screen and (max-width: 1220px) {
 
-    #validation { display: block; }
+    #validation { display: block }
 
 }
 
 /* Resizes the two columns and the clearBtn to better fit the screen size*/
 @media screen and (min-width: 1101px) and (max-width: 1220px) {
 
-    .twoColumn { width: 41%; }
+    .twoColumn { width: 41% }
 
-    #clearBtn { width: 14%; }
+    #clearBtn { width: 14% }
 
 }
