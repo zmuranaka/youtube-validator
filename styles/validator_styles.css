@@ -190,18 +190,10 @@ footer a {
 }
 
 /* Resizes the URL to better fit the screen size */
-@media screen and (min-width: 381px) and (max-width: 429px) {
-
-    div > label { font-size: 1.3em }
-
-}
+@media screen and (min-width: 381px) and (max-width: 429px) { div > label { font-size: 1.3em } }
 
 /* Style that makes h2s and labels with spans display in two lines */
-@media screen and (max-width: 490px) {
-
-    h2 span, label span { display: block }
-
-}
+@media screen and (max-width: 490px) { h2 span, label span { display: block } }
 
 /* Applies to most mobile views, like phones and smaller tablets */
 @media screen and (max-width: 683px) {
@@ -270,11 +262,7 @@ footer a {
 }
 
 /* Moves the counters below their label */
-@media screen and (max-width: 715px) {
-
-    .counter { display: block }
-
-}
+@media screen and (max-width: 715px) { .counter { display: block } }
 
 /* Applies to a fairly specific range of medium-sized screens, generally tablets */
 @media screen and (min-width: 684px) and (max-width: 715px) {
@@ -327,11 +315,7 @@ footer a {
 }
 
 /* Moves the validation elements below the h2 */
-@media screen and (max-width: 1220px) {
-
-    #validation { display: block }
-
-}
+@media screen and (max-width: 1220px) { #validation { display: block } }
 
 /* Resizes the two columns and the clearBtn to better fit the screen size*/
 @media screen and (min-width: 1101px) and (max-width: 1220px) {
