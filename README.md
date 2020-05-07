@@ -26,9 +26,9 @@ styles
 I got the GitHub logo from [GitHub](https://github.com/logos) and I created the mail and link logos in Adobe Photoshop.  
 Websites that helped me create the project:  
 http://conferences.sigcomm.org/imc/2011/docs/p371.pdf  
-&nbsp;&nbsp;&nbsp;&nbsp;This research paper describes the correct format of a YouTube video URL. This was very helpful because many sources incorrectly believed that all 11 characters at the end of a YouTube URL are the same, when in reality the last character is unique.  
+&nbsp;&nbsp;&nbsp;&nbsp;This research paper describes the correct format of a YouTube video URL. This was very helpful because many sources incorrectly stated that all 11 characters at the end of a YouTube URL are the same, when in reality the last character is different than the previous 10.  
 https://gist.github.com/tonY1883/a3b85925081688de569b779b4657439b  
-&nbsp;&nbsp;&nbsp;&nbsp;This trick from GitHub user tonY1883 gave me the idea of how to validate a YouTube URL with plain JavaScript.  
+&nbsp;&nbsp;&nbsp;&nbsp;This trick from GitHub user tonY1883 taught me how to validate a YouTube video by creating an image object with the src of the default thumbnail. This works because the default thumbnail of an invalid YouTube URL is not the same size as the thumbnail of a real video.  
 https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp  
 &nbsp;&nbsp;&nbsp;&nbsp;W3Schools was very helpful when I was checking that my syntax was correct and as a general reference. For example, the webpage I linked helped me figure out how to call a function when the user presses the 'enter' key.
 
